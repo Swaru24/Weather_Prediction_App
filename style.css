@@ -19,13 +19,13 @@ body {
   background: var(--primary-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://i.ibb.co/WGry01m/cd.jpg");
-  background-size : cover;
+  background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
 }
- img {
+img {
   width: 100%;
-} 
+}
 .wrapper {
   display: flex;
   width: 1200px;
@@ -76,6 +76,97 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
+/* Swarnima Added Start (4/11/24)*/
+/* Responsive Styles */
+
+/*For Large laptop and desktop */
+@media (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar,
+  .main {
+    width: 100%;
+    padding: 20px;
+  }
+  .temperature {
+    font-size: 60px;
+  }
+}
+/* For Tablet */
+@media (max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .temperature {
+    font-size: 50px;
+  }
+  .sidebar,
+  .main {
+    width: 100%;
+  }
+  .main {
+    padding: 15px;
+  }
+  .search input,
+  .search button {
+    font-size: 14px;
+  }
+  .cards .card,
+  .highlights .card2 {
+    width: 48%;
+    margin: 1%;
+  }
+}
+/* For Phone */
+@media (max-width: 768px) {
+  .temperature {
+    font-size: 40px;
+  }
+  .cards,
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards .card,
+  .highlights .card2 {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  .search input,
+  .search button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+/* For Small Phones */
+@media (max-width: 576px) {
+  .temperature {
+    font-size: 35px;
+  }
+  .search {
+    flex-direction: column;
+  }
+  .search input,
+  .search button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .cards .card,
+  .highlights .card2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .sidebar,
+  .main {
+    padding: 10px;
+  }
+}
+/* Swarnima Modified End(4/11/24) */
+
 .search ul {
   max-height: 300px;
   overflow-y: auto;
@@ -275,7 +366,7 @@ body {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-} 
-.credits u{
+}
+.credits u {
   color: blue;
 }
